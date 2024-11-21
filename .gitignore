@@ -1,0 +1,17 @@
+# chat
+node_modules
+node_modules/**
+node_modules/*
+./node_modules/*
+./*.zip/*
+/dist/
+
+
+
+
+.idea/
+*.log
+*.iml
+node_modules/
+
+helper.json

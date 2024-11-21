@@ -1,0 +1,232 @@
+.app-container-custom {
+  @apply h-screen flex flex-col;
+}
+
+.header-custom {
+  @apply flex justify-between items-center p-4 bg-gray-900 border-b border-gray-700;
+}
+
+.header-custom p {
+  @apply text-gray-300;
+}
+
+.header-custom button {
+  @apply bg-blue-500 text-white border-none py-2.5 px-5 rounded-lg cursor-pointer text-sm;
+}
+
+.header-custom button:disabled {
+  @apply bg-gray-500 cursor-not-allowed;
+}
+
+.header-custom button:not(:disabled):hover {
+  @apply bg-blue-600;
+}
+
+.container-custom {
+  @apply flex flex-1 p-4 gap-4 overflow-hidden;
+}
+
+.left-panel-custom, .right-panel-custom {
+  @apply flex-1 bg-gray-900 rounded-lg p-4 flex flex-col gap-3;
+}
+
+.error-input-custom {
+  @apply border border-gray-700 rounded-lg p-2 bg-gray-800;
+}
+
+.error-input-custom label {
+  @apply block mb-1 text-gray-300;
+}
+
+.error-input-custom textarea {
+  @apply bg-transparent border-none w-full text-gray-300 text-sm resize-none outline-none h-[60px];
+}
+
+@media screen and (max-width: 768px) {
+  .container-custom {
+    @apply flex-col;
+  }
+  
+  .left-panel-custom, .right-panel-custom {
+    @apply flex-none h-[50vh];
+  }
+}
+
+.user-center-custom {
+  cursor: pointer;
+  padding: 8px 12px;
+  color: #CBD5E1;
+}
+
+.user-center-custom:hover {
+  color: #fff;
+}
+
+.user-menu-custom {
+  position: relative;
+}
+
+/* 覆盖 Bootstrap 下拉菜单的一些样式 */
+.dropdown-menu {
+  background-color: #1E293B;
+  border: 1px solid #374151;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  min-width: 120px;
+}
+
+.dropdown-item {
+  color: #CBD5E1;
+  padding: 8px 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+.login-btn-custom {
+  padding: 8px 16px;
+  color: #CBD5E1;
+  background: none;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.login-btn-custom:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+/* 错误提示弹窗样式 */
+.error-modal-custom {
+  background-color: #1E293B;
+  border-radius: 12px;
+  padding: 24px;
+  width: 360px;
+  text-align: center;
+  border: 1px solid #374151;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.error-icon-wrapper {
+  margin-bottom: 16px;
+}
+
+.error-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  color: #EF4444;
+  animation: errorIconScale 0.3s ease-out;
+}
+
+.error-title {
+  color: #E5E7EB;
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.error-button {
+  background-color: #3B82F6;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.error-button:hover {
+  background-color: #2563EB;
+  transform: translateY(-1px);
+}
+
+.error-button:active {
+  transform: translateY(0);
+}
+
+@keyframes errorIconScale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 添加遮罩层样式 */
+.n-modal-mask {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+}
+
+/* 弹窗动画 */
+.n-modal-container {
+  animation: modalShow 0.3s ease-out;
+}
+
+@keyframes modalShow {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* 添加登录弹窗样式 */
+.login-modal-custom {
+  background-color: #1E293B;
+  border-radius: 12px;
+  padding: 24px;
+  width: 400px;
+  border: 1px solid #374151;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* 添加登录弹窗头部样式 */
+.login-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-modal-title {
+  color: #E5E7EB;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.login-modal-close {
+  background: none;
+  border: none;
+  color: #9CA3AF;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.login-modal-close:hover {
+  color: #E5E7EB;
+  background-color: #374151;
+} 
